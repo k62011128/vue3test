@@ -9,6 +9,5 @@
 <script lang="ts" setup>
 import { defineComponent } from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-import TableSheet from 'ey-table-sheet/src/TableSheet.vue'
-
+import TableSheet from "@/components/TableSheet.vue";
 </script>
