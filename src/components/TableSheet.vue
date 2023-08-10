@@ -6,7 +6,8 @@
         @workbookInitialized="initSpread"
     >
     </gc-spread-sheets>
-
+<!--    <gc-spread-sheets hostClass="spreadHost" @workbookInitialized="initWorkbook">-->
+<!--    </gc-spread-sheets>-->
 <!--        <div class="sample-tutorial">-->
 <!--          <div id="ss" class="sample-spreadsheets"></div>-->
 <!--          <div id="optionContainer" class="optionContainer">-->
@@ -26,7 +27,14 @@ import '@grapecity/spread-sheets-resources-zh';
 // GC.Spread.Sheets.LicenseKey = "ti.ey.com.cn,445458482469559#B0NN3W88kQ4YnUhR4Y4BXNhZlc65UaNdVRvEXWxsGW4ZkNCBjQvN4d636ZxQjZGJXR7VVT036LPhHdhJzZGZTZVNUViZjbhN6R4skNrFlSyQHVqlzSElmTzZDMtRUdFtSY83UOzNzTa5USYt6bj5kZS5keRlEVUVzdsx4LyVXTtlTNjNlaCBDcBhVSxBDNFlHUhhFdNNzVONEetR4ZJhEauBVW62WeKpXaZ3mYqd4RJJDVyY6RoNDRQFEbXd6aXZGRWNFTNtWVCxGR58WMtVWRyVWei3WaVVWTwp6SkJmZSdFOIdXbrVUTllDc7F7Yv94dal6NZhVRalGdOJiOiMlIsIiN4cjRCJ4MyIiOigkIsAzN5YTO7kjM0IicfJye#4Xfd5nIFVUSWJiOiMkIsICNx8idgAyUKBCZhVmcwNlI0IiTis7W0ICZyBlIsIiMzcTN9ADI6ATMxAjMwIjI0ICdyNkIsIibj9SbvNmL9VmLpRnI0IyctRkIsICuPWOrFWOkZmeicauoviOqSWum8Seg2Sei2+evbWer8SOi2+OuwaeiuWuI0ISYONkIsISO5UTO6QjM8QDO5QTN4QjI0ICZJJCL3V6csFmZ0IiczRmI1pjIs9WQisnOiQkIsISP3c7U9IHbyBnaPhDatlnWrU5Y8gDbntSaOhVSrMjR6ElRz2mMx9WbudjNt3CT9N5TopUS4kDZ0F4dvVkdiBzczYHeRZ7QvlTOVJXcwIEZzcFM4JHOJtSNC3yUg1zd";
 GC.Spread.Common.CultureManager.culture("zh-cn");
 
-
+function initWorkbook(spread:any) {
+  console.log('asdfasd')
+  let sheet = spread.getActiveSheet();
+  sheet
+      .getCell(0, 0)
+      .vAlign(GC.Spread.Sheets.VerticalAlign.center)
+      .value("Hello SpreadJS");
+}
 function initSpread(spread: any) {
   spread.suspendPaint();
   spread.clearSheets();
@@ -97,5 +105,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+.spreadHost {
+  width: 800px;
+  height: 800px;
 }
 </style>

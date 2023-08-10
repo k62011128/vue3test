@@ -3,9 +3,12 @@
 <!--    <router-link to="/">Home</router-link> |-->
 <!--    <router-link to="/about">About</router-link>-->
 <!--  </nav>-->
-  <router-view/>
+<!--  <router-view/>-->
+  <TableSheet></TableSheet>
 </template>
-
+<script lang="ts" setup>
+import TableSheet from './components/TableSheet.vue'
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
