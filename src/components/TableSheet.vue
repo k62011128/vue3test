@@ -67,7 +67,7 @@ let buttonArr = [
     name: '保存',
     fn: () => {
       // spreadVM.suspendPaint()
-      spreadVM.commandManager().SaveAll.execute(spreadVM, { sheetName: prop.dataSource.tableSheetName });
+      spreadVM.commandManager().SaveAll.execute(spreadVM, {sheetName: prop.dataSource.tableSheetName});
       // spreadVM.resumePaint()
     }
   }, {
@@ -89,9 +89,9 @@ let buttonArr = [
     name: '重置',
     fn: () => {
       spreadVM.suspendPaint()
-      let sheetTab=spreadVM.getSheetTab(0)
-      let rc=sheetTab.getRowCount()
-      for(let i=0;i<rc;i++){
+      let sheetTab = spreadVM.getSheetTab(0)
+      let rc = sheetTab.getRowCount()
+      for (let i = 0; i < rc; i++) {
         sheetTab.resetRow(i)
       }
       spreadVM.resumePaint()
@@ -104,8 +104,17 @@ let buttonArr = [
   }
 ]
 //自定义上方按钮
-if(prop.dataSource.buttons?.length){
-  prop.dataSource.buttons.forEach((item:any)=>{
+if (prop.defaultConfig.buttons?.length) {
+  for(let i=buttonArr.length-1;i>=0;i--){
+    if(prop.defaultConfig.buttons.includes(buttonArr[i].name)){
+      continue
+    }else {
+      buttonArr.splice(i,1)
+    }
+  }
+}
+if (prop.dataSource.buttons?.length) {
+  prop.dataSource.buttons.forEach((item: any) => {
     buttonArr.push(item)
   })
 }
@@ -133,8 +142,8 @@ function initSpread(spread: any) {
       // rowActions.saveRow,
       rowActions.resetRow
   );
-  if(prop.dataSource.RowButtons?.length){
-    prop.dataSource.RowButtons.forEach((item:any)=>{
+  if (prop.dataSource.RowButtons?.length) {
+    prop.dataSource.RowButtons.forEach((item: any) => {
       options.push(item)
     })
   }

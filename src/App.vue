@@ -5,7 +5,7 @@
 <!--  </nav>-->
 <!--  <router-view/>-->
   <div class="wrapper">
-    <TableSheet :data-source="data"></TableSheet>
+    <TableSheet :data-source="data" :default-config="defaultConfig"></TableSheet>
   </div>
 </template>
 <script lang="ts" setup>
@@ -32,7 +32,9 @@ let data={
   }],
   RowButtons:[]
 }
-
+let defaultConfig={
+  // buttons:['保存','刷新']
+}
 
 
 </script>
