@@ -22,6 +22,7 @@ import {
 import FileSaver from "file-saver"
 //@ts-ignore
 import {GcSpreadSheets} from '@grapecity/spread-sheets-vue'
+
 GC.Spread.Common.CultureManager.culture("zh-cn");
 
 interface Props {
@@ -37,8 +38,11 @@ interface dataSource {
 }
 
 const prop = defineProps({
-  'dataSource': {
-      default:{} as any
+  dataSource: {
+    default: {} as any
+  },
+  defaultConfig: {
+    default: {} as any
   }
 })
 if (!prop.dataSource.tableSheetName) {
@@ -53,8 +57,8 @@ if (!prop.dataSource.addTableParam) {
     }
   }
 }
-if(!prop.dataSource.addViewParam){
-  prop.dataSource.addViewParam=[]
+if (!prop.dataSource.addViewParam) {
+  prop.dataSource.addViewParam = []
 }
 
 
@@ -63,7 +67,9 @@ let buttonArr = [
   {
     name: '保存',
     fn: () => {
-
+      // spreadVM.suspendPaint()
+      spreadVM.commandManager().SaveAll.execute(spreadVM, { sheetName: prop.dataSource.tableSheetName });
+      // spreadVM.resumePaint()
     }
   }, {
     name: '下载',
@@ -83,12 +89,18 @@ let buttonArr = [
   }, {
     name: '重置',
     fn: () => {
-
+      spreadVM.suspendPaint()
+      let sheetTab=spreadVM.getSheetTab(0)
+      let rc=sheetTab.getRowCount()
+      for(let i=0;i<rc;i++){
+        sheetTab.resetRow(i)
+      }
+      spreadVM.resumePaint()
     }
   }, {
     name: '刷新',
     fn: () => {
-
+      initSpread(spreadVM)
     }
   }, {
     name: '[自定义插槽]',

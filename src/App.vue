@@ -12,7 +12,7 @@
 import TableSheet from './components/TableSheet.vue'
 
 let data={
-  tableSheetName:'name',
+  tableSheetName:'myTableName',
   addTableParam:{
     remote: {
       read: {
