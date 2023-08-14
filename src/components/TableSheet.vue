@@ -19,7 +19,7 @@ import '@grapecity/spread-sheets-resources-zh';
 import {
   IO
 } from "@grapecity/spread-excelio";
-import FaverSaver from "file-saver"
+import FileSaver from "file-saver"
 //@ts-ignore
 import {GcSpreadSheets} from '@grapecity/spread-sheets-vue'
 GC.Spread.Common.CultureManager.culture("zh-cn");
@@ -56,7 +56,8 @@ if (!prop.dataSource.addTableParam) {
 if(!prop.dataSource.addViewParam){
   prop.dataSource.addViewParam=[]
 }
-// console.log(prop.dataSource)
+
+
 let spreadVM: any = null
 let buttonArr = [
   {
@@ -74,7 +75,7 @@ let buttonArr = [
         saveAsView: true
       });
       excelIo.save(json, function (blob: any) {
-        FaverSaver.saveAs(blob, `${prop.dataSource.tableSheetName}.xlsx`);
+        FileSaver.saveAs(blob, `${prop.dataSource.tableSheetName}.xlsx`);
       }, function (e: any) {
         console.log(e);
       });
