@@ -6,6 +6,7 @@
 <!--  <router-view/>-->
   <div class="wrapper">
     <TableSheet :data-source="data" :default-config="defaultConfig"></TableSheet>
+<!--        <table-sheet :data-source="data"></table-sheet>-->
   </div>
 </template>
 <script lang="ts" setup>
