@@ -5,11 +5,31 @@
 <!--  </nav>-->
 <!--  <router-view/>-->
   <div class="wrapper">
-    <TableSheet></TableSheet>
+    <TableSheet :data-source="data"></TableSheet>
   </div>
 </template>
 <script lang="ts" setup>
 import TableSheet from './components/TableSheet.vue'
+
+let data={
+  tableSheetName:'name',
+  addTableParam:{
+    remote: {
+      read: {
+        url: 'https://demodata.grapecity.com/northwind/api/v1/Orders'
+      },
+    }
+  },
+  addViewParam:[
+    {value: "orderId", width: 80},
+    {value: "customerId", width: 200, caption: "customer Id"}
+  ],
+  buttons:[],
+  RowButtons:[]
+}
+
+
+
 </script>
 <style>
 .wrapper{
