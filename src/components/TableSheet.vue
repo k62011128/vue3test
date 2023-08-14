@@ -102,13 +102,13 @@ let buttonArr = [
     fn: () => {
       initSpread(spreadVM)
     }
-  }, {
-    name: '[自定义插槽]',
-    fn: () => {
-
-    }
   }
 ]
+if(prop.dataSource.buttons?.length){
+  prop.dataSource.buttons.forEach((item:any)=>{
+    buttonArr.push(item)
+  })
+}
 
 function initSpread(spread: any) {
   spreadVM = spread
@@ -148,7 +148,7 @@ function initSpread(spread: any) {
 <style scoped>
 .sample-tutorial {
   position: relative;
-  height: calc(100% - 30px);
+  height: calc(100% - 40px);
   overflow: hidden;
 }
 
@@ -160,7 +160,8 @@ function initSpread(spread: any) {
 }
 
 .button-wrapper {
-  height: 20px;
+  height: 30px;
+  display: flex;
   margin: 5px;
 }
 

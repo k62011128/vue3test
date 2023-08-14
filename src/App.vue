@@ -24,7 +24,12 @@ let data={
     {value: "orderId", width: 80},
     {value: "customerId", width: 200, caption: "customer Id"}
   ],
-  buttons:[],
+  buttons:[{
+    name:'test',
+    fn:()=>{
+      console.log('test')
+    }
+  }],
   RowButtons:[]
 }
 
