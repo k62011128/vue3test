@@ -26,8 +26,8 @@ let data={
   ],
   buttons:[{
     name:'test',
-    fn:()=>{
-      console.log('test')
+    fn:(spread:any)=>{
+      console.log('test',spread.getSheetTabCount())
     }
   }],
   RowButtons:[]

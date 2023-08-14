@@ -1,6 +1,6 @@
 <template>
   <div class="button-wrapper">
-    <button v-for="item in buttonArr" class="btn" @click="item.fn" :key="item">{{ item.name }}</button>
+    <button v-for="item in buttonArr" class="btn" @click="item.fn(spreadVM)" :key="item">{{ item.name }}</button>
   </div>
   <div class="sample-tutorial">
     <gc-spread-sheets
@@ -61,7 +61,6 @@ if (!prop.dataSource.addViewParam) {
   prop.dataSource.addViewParam = []
 }
 
-
 let spreadVM: any = null
 let buttonArr = [
   {
@@ -104,6 +103,7 @@ let buttonArr = [
     }
   }
 ]
+//自定义上方按钮
 if(prop.dataSource.buttons?.length){
   prop.dataSource.buttons.forEach((item:any)=>{
     buttonArr.push(item)
@@ -133,6 +133,11 @@ function initSpread(spread: any) {
       // rowActions.saveRow,
       rowActions.resetRow
   );
+  if(prop.dataSource.RowButtons?.length){
+    prop.dataSource.RowButtons.forEach((item:any)=>{
+      options.push(item)
+    })
+  }
   sheet.rowActionOptions(options);
 
   //bind a view to the table sheet
