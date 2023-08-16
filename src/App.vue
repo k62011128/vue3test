@@ -5,12 +5,18 @@
 <!--  </nav>-->
 <!--  <router-view/>-->
   <div class="wrapper">
-    <TableSheet :data-source="data" :default-config="defaultConfig"></TableSheet>
+<!--    <TableSheet :data-source="data" :default-config="defaultConfig"></TableSheet>-->
+    <TableSheet :data-source="data"></TableSheet>
+<!--        <table-sheet :data-source="data" :default-config="defaultConfig"></table-sheet>-->
 <!--        <table-sheet :data-source="data"></table-sheet>-->
   </div>
 </template>
 <script lang="ts" setup>
 import TableSheet from './components/TableSheet.vue'
+
+TableSheet.props.defaultConfig.default={
+  buttons:['保存','刷新'],
+}
 
 let data={
   tableSheetName:'myTableName',
@@ -34,7 +40,7 @@ let data={
   RowButtons:[]
 }
 let defaultConfig={
-  // buttons:['保存','刷新'],
+  buttons:['保存','刷新','重置'],
   registerCommands:(spread:any)=>{
 
   }

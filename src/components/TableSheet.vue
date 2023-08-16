@@ -105,11 +105,11 @@ let buttonArr = [
 ]
 //自定义上方按钮
 if (prop.defaultConfig.buttons?.length) {
-  for(let i=buttonArr.length-1;i>=0;i--){
-    if(prop.defaultConfig.buttons.includes(buttonArr[i].name)){
+  for (let i = buttonArr.length - 1; i >= 0; i--) {
+    if (prop.defaultConfig.buttons.includes(buttonArr[i].name)) {
       continue
-    }else {
-      buttonArr.splice(i,1)
+    } else {
+      buttonArr.splice(i, 1)
     }
   }
 }
@@ -121,7 +121,7 @@ if (prop.dataSource.buttons?.length) {
 
 function initSpread(spread: any) {
   spreadVM = spread
-  if(prop.defaultConfig.registerCommands){
+  if (prop.defaultConfig.registerCommands) {
     prop.defaultConfig.registerCommands(spreadVM)
   }
   spread.suspendPaint();
