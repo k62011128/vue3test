@@ -2080,11 +2080,29 @@ express@^4.17.3:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-ey-table-sheet@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ey-table-sheet/-/ey-table-sheet-1.0.1.tgz#a59a01bb84a512f6d16cfa0590a088e4ac1d4f0e"
-  integrity sha512-+Ntf4m205KNvUrI5Z3konA5TfoWdfLLPyO9JVIHMZ9KhF9wqHmmxT0Ysf+IW+8kED5ecCCc0Y4QXqDzSzQ5fdg==
+ey-table-sheet@^1.0.4:
+  version "1.0.4"
+  resolved "http://nexus3.ey.com.cn/repository/npm-group/ey-table-sheet/-/ey-table-sheet-1.0.4.tgz#9049155c783ab11b615f167c85676b1974610d3a"
+  integrity sha512-ipDeO6RiH+tmugfVH4Q0vg3Jo4nWYzlZufCMa5KnP15LH0Esq8emXPAdCyelHW+/NshOXbulg5JvXUUhFUg7Mw==
   dependencies:
+    "@grapecity/spread-excelio" "^16.1.4"
+    "@grapecity/spread-sheets" "^16.1.4"
+    "@grapecity/spread-sheets-barcode" "^16.1.4"
+    "@grapecity/spread-sheets-charts" "^16.1.4"
+    "@grapecity/spread-sheets-designer" "^16.1.4"
+    "@grapecity/spread-sheets-designer-resources-cn" "^16.1.4"
+    "@grapecity/spread-sheets-designer-resources-en" "^16.1.4"
+    "@grapecity/spread-sheets-designer-resources-ja" "^16.1.4"
+    "@grapecity/spread-sheets-designer-resources-ko" "^16.1.4"
+    "@grapecity/spread-sheets-languagepackages" "^16.1.4"
+    "@grapecity/spread-sheets-pdf" "^16.1.4"
+    "@grapecity/spread-sheets-pivot-addon" "^16.1.4"
+    "@grapecity/spread-sheets-print" "^16.1.4"
+    "@grapecity/spread-sheets-resources-zh" "^16.1.4"
+    "@grapecity/spread-sheets-shapes" "^16.1.4"
+    "@grapecity/spread-sheets-tablesheet" "^16.1.4"
+    "@grapecity/spread-sheets-vue" "^16.1.4"
+    file-saver "^2.0.2"
     vue "^3.2.20"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:

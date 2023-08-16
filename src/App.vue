@@ -34,7 +34,10 @@ let data={
   RowButtons:[]
 }
 let defaultConfig={
-  // buttons:['保存','刷新']
+  // buttons:['保存','刷新'],
+  registerCommands:(spread:any)=>{
+
+  }
 }
 
 

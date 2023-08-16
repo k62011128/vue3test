@@ -121,6 +121,9 @@ if (prop.dataSource.buttons?.length) {
 
 function initSpread(spread: any) {
   spreadVM = spread
+  if(prop.defaultConfig.registerCommands){
+    prop.defaultConfig.registerCommands(spreadVM)
+  }
   spread.suspendPaint();
   spread.clearSheets();
   spread.clearSheetTabs()
