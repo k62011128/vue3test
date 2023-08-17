@@ -7,11 +7,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-import TableSheet from './components/TableSheet.vue'
-
-TableSheet.props.defaultConfig.default={
-  buttons:['保存','刷新'],
-}
+// import TableSheet from './components/TableSheet.vue'
+//
+// TableSheet.props.defaultConfig.default={
+//   buttons:['保存','刷新'],
+// }
 
 let data={
   tableSheetName:'myTableName',

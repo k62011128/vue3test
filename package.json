@@ -15,11 +15,6 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-plugin-typescript": "~5.0.0",
-    "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "typescript": "~4.5.5",
     "@grapecity/spread-excelio": "16.1.4",
     "@grapecity/spread-sheets": "16.1.4",
     "@grapecity/spread-sheets-barcode": "16.1.4",
@@ -35,8 +30,13 @@
     "@grapecity/spread-sheets-print": "16.1.4",
     "@grapecity/spread-sheets-resources-zh": "16.1.4",
     "@grapecity/spread-sheets-shapes": "16.1.4",
-    "@grapecity/spread-sheets-vue": "16.1.4",
     "@grapecity/spread-sheets-tablesheet": "16.1.4",
-    "file-saver": "^2.0.2"
+    "@grapecity/spread-sheets-vue": "16.1.4",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "file-saver": "^2.0.2",
+    "typescript": "~4.5.5"
   }
 }

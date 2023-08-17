@@ -3,7 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './assets/main.css'
-// import EyTableSheet from 'ey-table-sheet'
+
+//@ts-ignore
+import EyTableSheet from 'ey-table-sheet'
+import 'ey-table-sheet/dist/ey-table-sheet.css'
 // import "@grapecity/spread-sheets/styles/gc.spread.sheets.excel2016colorful.css";
 import '@grapecity/spread-sheets/styles/gc.spread.sheets.excel2013white.css'
 
@@ -16,6 +19,6 @@ import '@grapecity/spread-sheets/styles/gc.spread.sheets.excel2013white.css'
 
 let app = createApp(App);
 
-// app.use(EyTableSheet);
+app.use(EyTableSheet);
 
 app.use(store).use(router).mount('#app')
