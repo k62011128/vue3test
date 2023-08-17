@@ -1,6 +1,6 @@
 {
   "name": "ey-table-sheet",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "private": false,
   "main":"dist/ey-table-sheet.umd.js",
   "scripts": {
