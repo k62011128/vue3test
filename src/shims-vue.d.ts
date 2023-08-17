@@ -5,4 +5,4 @@ declare module '*.vue' {
   export default component
 }
 
-// declare module 'ey-table-sheet'
+declare module 'ey-table-sheet'

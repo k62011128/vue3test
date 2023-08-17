@@ -10,7 +10,11 @@
     </gc-spread-sheets>
   </div>
 </template>
-
+<script>
+export default {
+  name:'EyTableSheet'
+}
+</script>
 <script lang="ts" setup>
 // import "@grapecity/spread-sheets/styles/gc.spread.sheets.excel2016colorful.css";
 import GC from "@grapecity/spread-sheets";
