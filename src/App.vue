@@ -1,9 +1,4 @@
 <template>
-<!--  <nav>-->
-<!--    <router-link to="/">Home</router-link> |-->
-<!--    <router-link to="/about">About</router-link>-->
-<!--  </nav>-->
-<!--  <router-view/>-->
   <div class="wrapper">
 <!--    <TableSheet :data-source="data" :default-config="defaultConfig"></TableSheet>-->
 <!--    <TableSheet :data-source="data"></TableSheet>-->

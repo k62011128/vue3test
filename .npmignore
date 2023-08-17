@@ -1,0 +1,9 @@
+node_modules/
+.git/
+.idea/
+src/
+public/
+.browserslistrc
+.gitignore
+tsconfig.json
+vue.config.js
