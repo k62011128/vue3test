@@ -2090,6 +2090,16 @@ ey-table-sheet@^1.1.2:
     vue-router "^4.0.3"
     vuex "^4.0.0"
 
+ey-table-sheet@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/ey-table-sheet/-/ey-table-sheet-1.1.3.tgz#1dc3ab1c230f13596aac9a6a46c24a3f8a2618d2"
+  integrity sha512-ZoGl8FJ18P2tc/8+IOdXDwMpzozJHR7ZoXryGqqoQm6cUMLLOg8mQeInO2HIieHXp9UNYt+Da15+KJ+nyd7dTQ==
+  dependencies:
+    ey-table-sheet "^1.1.2"
+    vue "^3.2.13"
+    vue-router "^4.0.3"
+    vuex "^4.0.0"
+
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
