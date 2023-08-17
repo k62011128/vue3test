@@ -2,11 +2,11 @@
   "name": "ey-table-sheet",
   "version": "1.1.3",
   "private": false,
-  "main":"dist/ey-table-sheet.umd.js",
+  "main":"dist/ey-table-sheet.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name ey-table-sheet src/packages/index.js"
+    "lib": "vue-cli-service build --target lib --name ey-table-sheet src/packages/eyTableSheet/index.js"
   },
   "dependencies": {
     "ey-table-sheet": "^1.1.2",

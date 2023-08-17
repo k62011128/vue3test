@@ -4,8 +4,9 @@ import router from './router'
 import store from './store'
 import './assets/main.css'
 
-// import EyTableSheet from 'ey-table-sheet'
-import 'ey-table-sheet/dist/ey-table-sheet.css'
+//@ts-ignore
+// import EyTableSheet from 'dist/ey-table-sheet.common.js'
+// import 'ey-table-sheet/dist/ey-table-sheet.css'
 
 // import "@grapecity/spread-sheets/styles/gc.spread.sheets.excel2016colorful.css";
 import '@grapecity/spread-sheets/styles/gc.spread.sheets.excel2013white.css'
