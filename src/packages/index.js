@@ -1,4 +1,4 @@
-import EyTableSheet from './packages/eyTableSheet/index.js';
+import EyTableSheet from './eyTableSheet/index.js';
 
 const components = [
     EyTableSheet
