@@ -6,9 +6,9 @@
 <!--  <router-view/>-->
   <div class="wrapper">
 <!--    <TableSheet :data-source="data" :default-config="defaultConfig"></TableSheet>-->
-    <TableSheet :data-source="data"></TableSheet>
-<!--        <table-sheet :data-source="data" :default-config="defaultConfig"></table-sheet>-->
-<!--        <table-sheet :data-source="data"></table-sheet>-->
+<!--    <TableSheet :data-source="data"></TableSheet>-->
+<!--        <ey-table-sheet :data-source="data" :default-config="defaultConfig"></ey-table-sheet>-->
+        <ey-table-sheet :data-source="data"></ey-table-sheet>
   </div>
 </template>
 <script lang="ts" setup>

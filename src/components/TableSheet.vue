@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import "@grapecity/spread-sheets/styles/gc.spread.sheets.excel2016colorful.css";
+// import "@grapecity/spread-sheets/styles/gc.spread.sheets.excel2016colorful.css";
 import GC from "@grapecity/spread-sheets";
 import "@grapecity/spread-sheets-tablesheet";
 import '@grapecity/spread-sheets-resources-zh';
