@@ -1,6 +1,6 @@
 <template>
   <div class="button-wrapper">
-    <button v-for="item in buttonArr" class="btn" @click="item.fn(spreadVM)" :key="item">{{ item.name }}</button>
+    <button v-for="item in buttonArr" class="btn" @click="item.fn(spreadVM)" :key="item.name">{{ item.name }}</button>
   </div>
   <div class="sample-tutorial">
     <gc-spread-sheets
@@ -10,7 +10,6 @@
     </gc-spread-sheets>
   </div>
 </template>
-
 <script lang="ts" setup>
 // import "@grapecity/spread-sheets/styles/gc.spread.sheets.excel2016colorful.css";
 import GC from "@grapecity/spread-sheets";
@@ -19,23 +18,12 @@ import '@grapecity/spread-sheets-resources-zh';
 import {
   IO
 } from "@grapecity/spread-excelio";
+//@ts-ignore
 import FileSaver from "file-saver"
 //@ts-ignore
 import {GcSpreadSheets} from '@grapecity/spread-sheets-vue'
 
 GC.Spread.Common.CultureManager.culture("zh-cn");
-
-interface Props {
-  tableSheetName?: string;
-  addTableParam?: any;
-  addViewParam?: any;
-  buttons?: any;
-  RowButtons?: any;
-}
-
-interface dataSource {
-  dataSource?: Props;
-}
 
 const prop = defineProps({
   dataSource: {
@@ -65,14 +53,14 @@ let spreadVM: any = null
 let buttonArr = [
   {
     name: '保存',
-    fn: () => {
+    fn: (spreadVM:any) => {
       // spreadVM.suspendPaint()
       spreadVM.commandManager().SaveAll.execute(spreadVM, {sheetName: prop.dataSource.tableSheetName});
       // spreadVM.resumePaint()
     }
   }, {
     name: '下载',
-    fn: () => {
+    fn: (spreadVM:any) => {
       let spread = spreadVM;
       let excelIo = new IO();
       let json = spread.toJSON({
@@ -87,7 +75,7 @@ let buttonArr = [
     }
   }, {
     name: '重置',
-    fn: () => {
+    fn: (spreadVM:any) => {
       spreadVM.suspendPaint()
       let sheetTab = spreadVM.getSheetTab(0)
       let rc = sheetTab.getRowCount()
@@ -98,7 +86,7 @@ let buttonArr = [
     }
   }, {
     name: '刷新',
-    fn: () => {
+    fn: (spreadVM:any) => {
       initSpread(spreadVM)
     }
   }

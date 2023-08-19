@@ -2,7 +2,8 @@
   "name": "ey-table-sheet",
   "version": "1.1.3",
   "private": false,
-  "main":"dist/ey-table-sheet.common.js",
+  "description": "ey table sheet component",
+  "main": "dist/ey-table-sheet.common.js",
   "publishConfig": {
     "registry": "http://nexus3.ey.com.cn/repository/npm-private/"
   },
@@ -11,8 +12,10 @@
     "build": "vue-cli-service build",
     "lib": "vue-cli-service build --target lib --name ey-table-sheet src/packages/eyTableSheet/index.js"
   },
+  "author": "Connor",
+  "license": "ISC",
   "dependencies": {
-    "ey-table-sheet": "^1.1.3",
+    "kanami-component": "^0.0.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"

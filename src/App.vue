@@ -1,14 +1,14 @@
 <template>
   <div class="wrapper">
 <!--    <TableSheet :data-source="data" :default-config="defaultConfig"></TableSheet>-->
-<!--    <TableSheet :data-source="data"></TableSheet>-->
+    <TableSheet :data-source="data"></TableSheet>
 <!--        <ey-table-sheet :data-source="data" :default-config="defaultConfig"></ey-table-sheet>-->
-        <ey-table-sheet :data-source="data"></ey-table-sheet>
+<!--        <ey-table-sheet :data-source="data"></ey-table-sheet>-->
   </div>
 </template>
 <script lang="ts" setup>
-// import TableSheet from './components/TableSheet.vue'
-
+import TableSheet from './components/TableSheet.vue'
+// import {EyTableSheet} from "kanami-component";
 //@ts-ignore
 // import EyTableSheet from 'ey-table-sheet'
 // import 'ey-table-sheet/dist/ey-table-sheet.css'

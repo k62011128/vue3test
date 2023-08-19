@@ -2080,26 +2080,6 @@ express@^4.17.3:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-ey-table-sheet@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/ey-table-sheet/-/ey-table-sheet-1.1.2.tgz#182a624b70b16524c47ed2a838c5763115574433"
-  integrity sha512-ZVcznJjRvwWUSmvcatR5bOQMYx33f+5Yv7CZFAbaVtOojocKj+OV2ke3WVehpRGVDf/zRQPzqX6GcQt26rLaVA==
-  dependencies:
-    ey-table-sheet "^1.1.2"
-    vue "^3.2.13"
-    vue-router "^4.0.3"
-    vuex "^4.0.0"
-
-ey-table-sheet@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/ey-table-sheet/-/ey-table-sheet-1.1.3.tgz#1dc3ab1c230f13596aac9a6a46c24a3f8a2618d2"
-  integrity sha512-ZoGl8FJ18P2tc/8+IOdXDwMpzozJHR7ZoXryGqqoQm6cUMLLOg8mQeInO2HIieHXp9UNYt+Da15+KJ+nyd7dTQ==
-  dependencies:
-    ey-table-sheet "^1.1.2"
-    vue "^3.2.13"
-    vue-router "^4.0.3"
-    vuex "^4.0.0"
-
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
@@ -2757,6 +2737,13 @@ jsonfile@^6.0.1:
     universalify "^2.0.0"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+kanami-component@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/kanami-component/-/kanami-component-0.0.2.tgz#8323b54ab2f62b601579c7aa4483b0907e631c4f"
+  integrity sha512-+9/mnPPC8n4cdQSSFousxqQL8b/wN41PN7vqoHM/PaHBmrrPTcZFNV6WY0RMWtGp22POtiWyxqbO7pnYQI4OsQ==
+  dependencies:
+    vue "^3.2.13"
 
 kind-of@^6.0.2:
   version "6.0.3"
